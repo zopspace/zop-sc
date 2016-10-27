@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>ZoP - Stokes Croft - About</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="stokes croft, informal learning, urban regeneration, activism, culture, graffiti, music" />
+
+<!-- bootstrap -->
+<link href="css/bootstrap.zop-sc.css" rel='stylesheet' type='text/css' media="all" />
+<!-- //bootstrap -->
+<link href="css/dashboard.css" rel="stylesheet">
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' media="all" />
+<!-- Scripts for Tag animation -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- fonts -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+<!-- //fonts -->
+<style>
+    body {
+        padding-top: 60px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    p {
+    color: #234a91;
+    }
+</style>
+<!-- for all pop-up-boxes -->
+			<script type="text/javascript" src="js/modernizr.custom.min.js"></script>    
+			<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+			<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+			<!--//pop-up-box -->
+			<script>
+					$(document).ready(function() {
+					$('.popup-with-zoom-anim').magnificPopup({
+						type: 'inline',
+						fixedContentPos: false,
+						fixedBgPos: true,
+						overflowY: 'auto',
+						closeBtnInside: true,
+						preloader: false,
+						midClick: true,
+						removalDelay: 300,
+						mainClass: 'my-mfp-zoom-in'
+					});
+																					
+					});
+			</script>
+
+<script src="php/js/notify.min.js"></script>
+<!--script to show and hide welcome panel and replace with search panel plus the tag colour code-->
+<script>
+$(document).ready(function(){
+    $("#welcome").click(function(){
+    	$("#search-panel").hide();
+		$("#search-parameters").show();
+    });
+    $(".search").click(function(){
+        //$("#search-panel").show();
+		//$("#welcome-panel").hide();
+		$("#search-panel").toggle();
+		$("#search-parameters").toggle();
+    });
+
+    $("#tag_input").val(""); //initialize the hidden field with empty value
+	var num = 0;
+	var limit = 15;
+	$("#tagList").change(function(){
+		if (limit > num) {
+      		num	+= 1;
+      	}
+      	else {
+      		num	-= 14;
+      	}
+    	var tag = $(this).val();
+    	var labelId = tag.toLowerCase().replace(" ","_");
+    	//already selected
+    	if ( $("#tag_"+labelId).length > 0){
+    		$.notify(tag + " already selected.", "info");
+    		return;
+    	}
+    	var tagLabel = "<span id='tag_" + labelId+"' class='tagLabel tag"+ num+"'>" + tag +"</span>";
+    	$("#selectedTags").append(tagLabel);
+    	
+    	//add selected tag to search form
+    	$("#tag_input").val($("#tag_input").val() + tag + ",");
+    });
+});
+</script>
+</head>
+
+<body>
+  	<!--Header and Navigation-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          		<button type="button" id="dropper" class="navbar-toggle collapsed right-pad" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+          		</button>
+          		<a class="navbar-brand" href="index.html"><img src="images/zoplogotemp160.png" height="65" width="72" class="logo" alt="ZoP - Stokes Croft" /></a>
+          		<p class="header10">STOKES CROFT</p>
+          	<!--Dropdown menu-->
+			<!-- Help popup -->
+			<div id="small-dialog5" class="mfp-hide">
+			<h3>Help</h3>
+			<h4>This is a demo website so it doesn't have full functionality.</h4> 
+				<div class="help-grid">	
+				</div>
+				<div class="help-grids">
+					<div class="help-button-bottom">
+						<h5>Rather than offer you help here, we'd rather that you'd let us know via the feedback page all those things you didn't understand or found hard to do.</h5>
+						<h5>Thanks for your help.</h5>
+					</div>
+				</div>
+			</div>
+			<!-- my-ZoP popup 
+			<div class="signin">
+					<div id="small-dialog" class="mfp-hide">
+						<h3>My ZoP</h3>
+						<h4>To store your playlist, to comment or annotate, you’d need to login using Google, Facebook or email. For the moment you don’t need to as we’re just in test mode. Thanks.</h4>
+						<div class="social-sits">
+							<div class="facebook-button">
+								<a href="#">Connect with Facebook</a>
+							</div>
+							<div class="chrome-button">
+								<a href="#">Connect with Google</a>
+							</div>
+							<div class="button-bottom">
+								<p>It is currently not possible to Login.</p>
+							</div>
+						</div>
+						<div class="signup">
+							<form>
+								<input type="text" class="email" placeholder="Enter email / mobile" required="required" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?"/>
+								<input type="password" placeholder="Password" required="required" pattern=".{6,}" title="Minimum 6 characters required" autocomplete="off" />
+								<input type="submit"  value="LOGIN"/>
+							</form>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+			</div>-->
+          
+          	<div class="drop-navigation">
+				  <ul class="nav nav-sidebar">
+					<li class="active"><a href="index.html" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+					<li><a href="https://zopspace.onlinesurveys.ac.uk/zop-space-stokes-croft" target="blank" class="user-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>Feedback</a></li>
+					<li><a href="about.html" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>About</a></li>
+			<!--		<li><a href="#small-dialog" class="play-icon popup-with-zoom-anim"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>My-ZoP</a></li> -->
+					<li><a href="#small-dialog5" class="play-icon popup-with-zoom-anim f-history f-help"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>Help</a></li>
+					<li><a class="search" href="javascript:void();"><span class="glyphicon glyphicon-search"></span></a></li>
+						<!-- script-for-menu -->
+						<script>
+							$( "#dropper" ).click(function() {
+							$( ".drop-navigation" ).slideToggle( 300, function() {
+							// Animation complete.
+							});
+							});
+						</script>
+				  </ul>
+			</div>
+       	</div>
+        <div id="navbar" class="navbar-collapse collapse">
+			<div class="header-top-right">
+              		<ul class="nav navbar-nav double">    
+                		<li><a href="http://zop.space/sc/index.html">Home</a></li>
+                		<li><a href="https://zopspace.onlinesurveys.ac.uk/zop-space-stokes-croft" target="blank">Feedback</a></li>
+                		<li><a href="about.html">About</a></li>
+             <!--   		<li><a href="#small-dialog" class="play-icon popup-with-zoom-anim f-help">My-ZoP</a></li>  -->
+                		<li><a href="#small-dialog5" class="play-icon popup-with-zoom-anim f-history f-help">Help</a></li>
+                		<li><a class="search" href="javascript:void();"><span class="glyphicon glyphicon-search"></span></a></li>
+              		</ul>
+				<div class="clearfix"> </div>
+			</div>
+        </div>
+		<div class="clearfix"> </div>
+      </div>
+    </nav>  
+    <!--End of Header and Navigation-->
+<!--page content-->
+<div id="page-content" class="col-sm-12">
+	<div class="main-grids">
+		<div class="top-grids">
+
+
+<!-- search panel -->
+				<div id="search-panel">
+				<form method="post" action="php/zopspace_search2.php" id="search_form">
+				<input type="hidden" id="tag_input" name="tag_input" value="" />
+				<h3>Use the search tool to create a playlist</h3>
+					<div id="search-panel-pad">
+							<div class="col-xs-3">
+								<div class="search-left">
+									<p class="para11">Tags</p>
+								</div>
+							</div>
+						
+							<div class="col-xs-9">
+								<div class="search-right">
+										<ul>
+											<li>
+												<select class="pulldown form-control" id="tagList" name="tagList">
+													<option value="" selected="true">Add tags</option>
+													<option>Activism</option>
+													<option>Art</option>
+													<option>Capitalism</option>
+													<option>Corporations</option>
+													<option>Council</option>
+													<option>Craft</option>
+													<option>Crime</option>
+													<option>Enterprise</option>
+													<option>Environment</option>
+													<option>Food</option>
+													<option>Funding</option>
+													<option>Gentrification</option>
+													<option>Getting Started</option>
+													<option>Globalisation</option>
+													<option>Graffiti</option>
+													<option>Health</option>
+													<option>Homelessness</option>
+													<option>Internet</option>
+													<option>Mental Health</option>
+													<option>Music</option>
+													<option>Nightlife</option>
+													<option>Property</option>
+													<option>Pottery</option>
+													<option>Riots</option>
+													<option>Strategy</option>
+													<option>Vegan</option>
+												</select>
+											</li>
+										</ul>
+								</div>
+								<div id="selectedTags"></div>
+							</div>
+						
+							<div class="clearfix"> </div>
+						
+						
+						<div class="col-xs-3">
+							<div class="search-left">
+								<p class="para11">Title contains</p>
+							</div>
+						</div>
+						<div class="col-xs-9">
+							<div class="search-right">
+  									<input type="text" placeholder="Enter words from Title" class="textinput form-control" 
+  									value="" id="titlecontains" name="titlecontains">
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+						
+						<div class="col-xs-3">
+							<div class="search-left">
+								<p class="para11">Text contains</p>
+							</div>
+						</div>
+						<div class="col-xs-9">
+							<div class="search-right">
+  						        <input type="text" placeholder="Enter words from Description/Comments" class="textinput form-control" 
+  						         value="" id="txtcontains" name="txtcontains">
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+						
+						
+						<div class="col-xs-3">
+							<div class="search-left">
+								<p class="para11">Owner</p>
+							</div>
+						</div>
+						<div class="col-xs-9">
+							<div class="search-right">
+								<ul>
+									<li>
+										<select class="pulldown form-control" id="author_dropdown" name="author">
+											<option value="" >Select Owner</option>
+											<!-- option>Person 1</option>
+											<option>Person 2</option>
+											<option>Person 3</option -->
+										</select>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+						
+						<div class="col-xs-3">
+							<div class="search-left">
+								<p class="para11">Order by...</p>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="search-right">
+								<ul>
+									<li>
+										<select id="orderCtrl" class="pulldown form-control" name="orderCtrl">
+											<!--option value='view'>Most viewed</option-->
+											<!-- option value='like'>Most liked</option -->
+											<option value='recent'>Most recent</option>
+											<option value='alpha'>Alphabetical</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-xs-5">
+							<div class="search-right">
+						<!--		<div class="search-click"><a id="welcome" href="#" onClick="return ZopSpace.search();">Create playlist locally</a> -->
+								</div>
+                                <div class="search-click"><a id="welcome" href="#" onClick="return ZopSearch.submit();">Create playlist</a>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"> </div>	
+					</div>
+                    </form>
+				</div>
+<!-- //search panel -->   
+        
+        <div class="col-sm-12 main">
+        	<div class="col-sm-12">
+        		<img src="images/ZoP_iPhone.gif" alt="ZoP App">
+        	</div>
+        	<div class="col-sm-12">
+   
+						<h3>Contribute</h3>
+						<h5>We have also developed a phone app that lets you easily record and upload content.</h5>
+						<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			</div>
+				
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			
+							
+			
+			
+			
+			<!-- footer -->
+			<div class="footer">
+					<div class="footer-grids">
+						<div class="footer-top">
+							<div class="footer-bottom-nav">
+								<ul>
+									<li><a href="privacy.html">Terms & Conditions</a></li>
+									<li><a href="privacy.html">Privacy</a></li>
+									<li><a href="privacy.html">Cookies</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-bottom">
+							<div class="col-lg-1 col-md-2 col-xs-3">
+									<img src="images/Cc-by-nc_icon.svg.png" width="100%" height="100%" alt="CC License">
+							</div>
+								<div class="col-lg-11 col-md-10 col-xs-9">
+									<p class="para10">Licensees may copy, distribute, display and perform the work and make derivative works and remixes based on it only if they give the author or licensor the credits (attribution) in the manner specified by these.</p>		
+							</div>
+						</div> 
+						
+					</div>
+			</div><!-- //footer -->
+		</div><!-- /col-sm-12 -->
+		</div>
+		</div>
+		</div>
+		<div class="clearfix"> </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="php/js/zopsearch.js"></script>
+    <script type="text/javascript">
+      //load author list and also set it to the previous selected value
+      ZopSearch.loadAuthorList("");
+      
+    </script>
+    <!-- Google Analytics Script -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-84915946-1', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+  </body>
+</html>

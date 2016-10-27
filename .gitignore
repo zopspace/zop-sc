@@ -1,0 +1,43 @@
+#test index pages
+index2.html
+index3.html
+index-orange.html
+
+#images
+images/
+
+#old directories
+canbedeleted/
+
+#other test html pages
+search-test.html
+single.html
+single2.html
+php/single-dev.html
+php/single-dev2.html
+php/testsss.html
+php/zoptest*.html
+
+#js files
+php/js/app.js
+php/js/react-dom.js
+php/js/react.min.js
+php/js/tags.js
+php/js/videos.js
+
+#other documetns
+test.pdf
+testa.pdf
+testb.pdf
+testc.pdf
+*.csv
+
+#php scripts
+#mention the required field in README file
+php/config.php
+php/zopspace_search.php
+
+php/req.php
+php/SSSDiscClient.php
+php/SSSRestClient.php
+
